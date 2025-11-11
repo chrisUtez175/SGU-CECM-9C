@@ -30,7 +30,7 @@ const Home = () => {
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(API_URL/listAll);
+      const response = await fetch(API_URL+'/listAll');
       if (!response.ok) throw new Error(`Error en la solicitud: ${response.status}`);
       const apiData = await response.json();
 
