@@ -35,7 +35,7 @@ public class PersonController {
         return 	personServiceRepository.updatePersona(person);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @PutMapping("/delete/{id}")
     public ResponseEntity<Message> actualizarEstatus(@PathVariable long id) {
         return personServiceRepository.actualizarEstatus(id);
     }
