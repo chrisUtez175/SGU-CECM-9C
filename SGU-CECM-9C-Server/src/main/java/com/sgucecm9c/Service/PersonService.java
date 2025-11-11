@@ -56,6 +56,8 @@ public class PersonService  implements PersonServiceRepository {
 
     @Override
     public ResponseEntity<Message> updatePersona(PersonEntity person) {
+        PersonEntity savePerson = person;
+        savePerson.setEstado(true);
         PersonEntity personEntity = personRepository.saveAndFlush(person);
 
         if(personEntity == null){
