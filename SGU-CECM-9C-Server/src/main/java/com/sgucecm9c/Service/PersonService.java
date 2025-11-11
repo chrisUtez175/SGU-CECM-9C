@@ -25,7 +25,9 @@ public class PersonService  implements PersonServiceRepository {
 
     @Override
     public ResponseEntity<Message> guardarPersona(PersonEntity person) {
-        PersonEntity personEntity = personRepository.saveAndFlush(person);
+        PersonEntity savePerson = person;
+        savePerson.setEstado(true);
+        PersonEntity personEntity = personRepository.saveAndFlush(savePerson);
 
         if(personEntity == null){
             return new ResponseEntity<>(new Message("la persona no se ha registrado", TypesResponse.WARNING), HttpStatus.BAD_REQUEST);
