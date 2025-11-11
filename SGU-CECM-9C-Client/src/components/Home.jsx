@@ -130,10 +130,10 @@ const Home = () => {
     if (window.confirm(`¿Estás seguro de que quieres eliminar el registro con ID: ${id}? Esta acción es irreversible.`)) {
       setIsLoading(true);
       try {
-        const url = `${API_URL}'/delete'/${id}`; 
+        const url = `${API_URL}/delete/${id}`; 
         
         const response = await fetch(url, {
-          method: 'DELETE',
+          method: 'PUT',
         });
 
         if (!response.ok) {
