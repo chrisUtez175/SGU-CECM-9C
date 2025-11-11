@@ -1,4 +1,4 @@
-sgu-cecm-9cpipeline {
+sgu-cecm-pipeline {
     agent any
 
     stages {
