@@ -9,7 +9,7 @@ const API_SAVE_URL = 'http://localhost:8090/person/save';
 const API_UPDATE_URL = 'http://localhost:8090/person/updatePerson'; 
 const API_DELETE_BASE_URL = 'http://localhost:8090/person/delete'; 
 */
-const API_URL = `http://${ENV.VITE_API_HOST}:${ENV.VITE_API_PORT}${ENV.VITE_API_BASE}`;
+const API_URL = `${ENV.VITE_API_PROTOCOL}://${ENV.VITE_API_HOST}:${ENV.VITE_API_PORT}${ENV.VITE_API_BASE}`;
 
 
 const Home = () => {
